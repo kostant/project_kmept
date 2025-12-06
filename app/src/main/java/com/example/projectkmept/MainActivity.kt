@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.projectkmept.screens.AntonchikActivity
+import com.example.projectkmept.screens.RomaniucActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.antonchikButton).setOnClickListener {
             val intent = Intent(this, AntonchikActivity::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.RomaniucButton).setOnClickListener {
+            val intent = Intent(this, RomaniucActivity::class.java)
             startActivity(intent)
         }
     }
