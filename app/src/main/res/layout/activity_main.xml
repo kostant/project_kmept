@@ -35,6 +35,11 @@
             android:layout_height="wrap_content"
             android:text="Абдуллин"/>
 
+        <Button
+            android:id="@+id/oorzhakButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ооржак"/>
     </LinearLayout>
 
 </ScrollView>

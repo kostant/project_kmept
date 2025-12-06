@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".screens.ArsenchikActivity"/>
         <activity android:name=".screens.AntonchikActivity"/>
         <activity android:name=".screens.AbdullinActivity"/>
         <activity android:name=".screens.RomaniucActivity"/>
