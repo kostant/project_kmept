@@ -17,6 +17,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Антончик"/>
+        <Button
+            android:id="@+id/RomaniucButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Романюк"/>
+
+        <Button
+            android:id="@+id/lyraButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Кугел"/>
 
         <Button
             android:id="@+id/AbdullinButton"
