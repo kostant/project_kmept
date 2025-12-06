@@ -24,6 +24,7 @@
 
         <activity android:name=".screens.AntonchikActivity"/>
         <activity android:name=".screens.RomaniucActivity"/>
+        <activity android:name=".screens.LyraActivity"/>
     </application>
 
 </manifest>
