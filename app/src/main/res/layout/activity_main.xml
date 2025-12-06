@@ -17,6 +17,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Антончик"/>
+        <Button
+            android:id="@+id/velmakinhikButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вельмакин"/>
 
     </LinearLayout>
 

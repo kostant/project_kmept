@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".screens.AntonchikActivity"/>
+        <activity android:name=".screens.VelmakinhikActivity"/>
     </application>
 
 </manifest>
