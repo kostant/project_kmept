@@ -23,6 +23,7 @@
         </activity>
 
         <activity android:name=".screens.ArsenchikActivity"/>
+        <activity android:name=".screens.AntonchikActivity"/>
     </application>
 
 </manifest>
