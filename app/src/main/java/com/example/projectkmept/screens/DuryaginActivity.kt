@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.projectkmept.R
 import com.example.projectkmept.duryagin.duryagin.DuryaginViewHolder
 
-class ArsenchikAdapter: RecyclerView.Adapter<DuryaginViewHolder>(){
+class DraginAdapter: RecyclerView.Adapter<DuryaginViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DuryaginViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val itemView = inflater.inflate(R.layout.item_duryagin, parent, false)
