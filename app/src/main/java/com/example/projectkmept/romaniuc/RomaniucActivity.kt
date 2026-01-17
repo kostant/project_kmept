@@ -1,22 +1,13 @@
-package com.example.projectkmept
+package com.example.projectkmept.romaniuc
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projectkmept.R
 import com.example.projectkmept.romaniuc.Romaniuc.UsersAdapter
-import com.example.projectkmept.screens.AntonchikActivity
-import com.example.projectkmept.screens.ArsenchikActivity
-import com.example.projectkmept.screens.AbdullinActivity
-import com.example.projectkmept.screens.KovalevActivitry
-import com.example.projectkmept.romaniuc.RomaniucActivity
-import com.example.projectkmept.screens.LyraActivity
 
-
-
-class MainActivity : AppCompatActivity() {
+class RomaniucActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_romaniuc) // Убедитесь, что это правильный layout
@@ -41,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 name = "Sam Winchester",
                 timeInfo = "now following you · 1h",
                 avatarResId = R.drawable.avatar3,
-                isFollowing = false
+                isFollowing = true
             ),
             UsersAdapter.User(
                 name = "Dean Winchester",
@@ -60,43 +51,7 @@ class MainActivity : AppCompatActivity() {
                 name = "Мария Петрова",
                 timeInfo = "now following you · 3h",
                 avatarResId = R.drawable.avatar6,
-                isFollowing = false
-            ),
-            UsersAdapter.User(
-                name = "Алексей Иванов",
-                timeInfo = "now following you · 2h",
-                avatarResId = R.drawable.avatar7,
-                isFollowing = false
-            ),
-            UsersAdapter.User(
-                name = "Алексей Иванов",
-                timeInfo = "now following you · 2h",
-                avatarResId = R.drawable.avatar8,
-                isFollowing = false
-            ),
-            UsersAdapter.User(
-                name = "Алексей Иванов",
-                timeInfo = "now following you · 2h",
-                avatarResId = R.drawable.avatar9,
-                isFollowing = false
-            ),
-            UsersAdapter.User(
-                name = "Алексей Иванов",
-                timeInfo = "now following you · 2h",
-                avatarResId = R.drawable.avatar10,
-                isFollowing = false
-            ),
-            UsersAdapter.User(
-                name = "Алексей Иванов",
-                timeInfo = "now following you · 2h",
-                avatarResId = R.drawable.avatar11,
-                isFollowing = false
-            ),
-            UsersAdapter.User(
-                name = "Алексей Иванов",
-                timeInfo = "now following you · 2h",
-                avatarResId = R.drawable.avatar12,
-                isFollowing = false
+                isFollowing = true
             ),
             // ... остальные пользователи
         )
@@ -106,7 +61,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-
+        // Если нужно добавить разделители:
+        // val divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        // recyclerView.addItemDecoration(divider)
 
         recyclerView.setHasFixedSize(true)
     }
