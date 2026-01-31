@@ -1,69 +1,60 @@
-package com.example.projectkmept.romaniuc
+package com.example.projectkmept
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager // Обязательно импортируй это
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projectkmept.R
 import com.example.projectkmept.romaniuc.Romaniuc.UsersAdapter
 
 class RomaniucActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_romaniuc) // Убедитесь, что это правильный layout
+        setContentView(R.layout.activity_romaniuc)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
 
-        // Создаем тестовые данные как на скриншоте
-        val users = listOf(
+        // 1. Создаем данные под новый формат (автор, блюдо, категория, время, аватар, еда)
+        val foodList = listOf(
             UsersAdapter.User(
-                name = "Dean Winchester",
-                timeInfo = "now following you · 1h",
-                avatarResId = R.drawable.avatar1, // Замените на ваши ресурсы
-                isFollowing = false
+                authorName = "Calum Lewis",
+                foodTitle = "Pancake",
+                category = "Food",
+                cookingTime = ">60 mins",
+                avatarUrl = "https://i.pinimg.com/1200x/1e/8c/1b/1e8c1b22db390ac5c59782692b777d40.jpg",
+                foodImageUrl = "https://www.liway.ru/upload/medialibrary/036/0367b3565bda6a8a0dac3fabc48e9835.jpg" // Твоя картинка блинов
             ),
             UsersAdapter.User(
-                name = "John Steve",
-                timeInfo = "now following you · 1h",
-                avatarResId = R.drawable.avatar2,
-                isFollowing = false
+                authorName = "Eilif Sonas",
+                foodTitle = "Salad",
+                category = "Food",
+                cookingTime = ">60 mins",
+                avatarUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRya24a3K3d4sudzJelCcp7AHB3UANTpPBGQg&s",
+                foodImageUrl = "https://www.bahroma1.ru/goods/img-articles/kak-pravilno-fotografirovat.jpg" // Твоя картинка салата
             ),
             UsersAdapter.User(
-                name = "Sam Winchester",
-                timeInfo = "now following you · 1h",
-                avatarResId = R.drawable.avatar3,
-                isFollowing = true
+                authorName = "Elena Shelby",
+                foodTitle = "Pancake",
+                category = "Food",
+                cookingTime = ">60 mins",
+                avatarUrl = "https://sun1-95.userapi.com/impg/-kJZBISahLLGK0KtZ1udOkOnmrwsmsXzn8m17w/UixIKsfwVkY.jpg?size=520x0&quality=95&sign=cf3f88e05fcd7ddf1ec82bfae46d0a57",
+                foodImageUrl = "https://cafebrynza.ru/images/articles/5-poleznykh-svojstv-goryachej-edy_66a272bd082bc2.png"
             ),
             UsersAdapter.User(
-                name = "Dean Winchester",
-                timeInfo = "now following you · 1h",
-                avatarResId = R.drawable.avatar4,
-                isFollowing = false
-            ),
-            // Добавьте остальные пользователи по аналогии
-            UsersAdapter.User(
-                name = "Алексей Иванов",
-                timeInfo = "now following you · 2h",
-                avatarResId = R.drawable.avatar5,
-                isFollowing = false
-            ),
-            UsersAdapter.User(
-                name = "Мария Петрова",
-                timeInfo = "now following you · 3h",
-                avatarResId = R.drawable.avatar6,
-                isFollowing = true
-            ),
-            // ... остальные пользователи
+                authorName = "John Priyadi",
+                foodTitle = "Salad",
+                category = "Food",
+                cookingTime = ">60 mins",
+                avatarUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD2QcBlCrplSFxOw6t_S5hiCutqX-hhVRE1A&s",
+                foodImageUrl = "https://snob.ru/news/kazhdyj-sedmoj-vzroslyj-na-zemle-zavisim-ot-promyshlennoj-edy/"
+            )
         )
 
-        // Настройка RecyclerView
-        val adapter = UsersAdapter(users)
+        // 2. Инициализируем адаптер
+        val adapter = UsersAdapter(foodList)
         recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Если нужно добавить разделители:
-        // val divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
-        // recyclerView.addItemDecoration(divider)
+        // 3. САМОЕ ВАЖНОЕ: Устанавливаем GridLayoutManager (сетка в 2 колонки)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         recyclerView.setHasFixedSize(true)
     }

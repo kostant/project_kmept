@@ -9,8 +9,8 @@ import com.example.projectkmept.R
 
 class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val avatarImageView: ImageView = itemView.findViewById(R.id.avatarImageView)
-    val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
-    val timeTextView: TextView = itemView.findViewById(R.id.timeTextView)
-    val followButton: Button = itemView.findViewById(R.id.followButton)
-
+    val authorName: TextView = itemView.findViewById(R.id.authorName)
+    val foodImageView: ImageView = itemView.findViewById(R.id.foodImageView)
+    val foodTitle: TextView = itemView.findViewById(R.id.foodTitle)
+    val foodDetails: TextView = itemView.findViewById(R.id.foodDetails)
 }

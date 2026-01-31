@@ -3,62 +3,50 @@ package com.example.projectkmept.romaniuc.Romaniuc
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.projectkmept.R
 
 class UsersAdapter(private val userList: List<User>) :
     RecyclerView.Adapter<UserViewHolder>() {
 
-    // Обновленная модель данных
+    // 1. Обновленная модель данных под скриншот
     data class User(
-        val name: String,
-        val timeInfo: String, // "now following you · 1h"
-        val avatarResId: Int,
-        var isFollowing: Boolean = false // состояние кнопки
+        val authorName: String,
+        val foodTitle: String,
+        val category: String,
+        val cookingTime: String,
+        val avatarUrl: String,
+        val foodImageUrl: String // Ссылка на картинку блюда
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+        // Убедись, что R.layout.food — это тот XML с CardView, который мы обсуждали
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_romaniuc, parent, false)
+            .inflate(R.layout.food, parent, false)
         return UserViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val currentUser = userList[position]
 
-        // Устанавливаем данные
-        holder.nameTextView.text = currentUser.name
-        holder.timeTextView.text = currentUser.timeInfo
-        holder.avatarImageView.setImageResource(currentUser.avatarResId)
+        holder.authorName.text = currentUser.authorName
+        holder.foodTitle.text = currentUser.foodTitle
+        holder.foodDetails.text = "${currentUser.category}  •  ${currentUser.cookingTime}"
 
-        // Настраиваем кнопку Follow
-        if (currentUser.isFollowing) {
-            holder.followButton.text = "Followed"
-            holder.followButton.backgroundTintList =
-                android.content.res.ColorStateList.valueOf(
-                    android.graphics.Color.parseColor("#CCCCCC")
-                )
-        } else {
-            holder.followButton.text = "Follow"
-            holder.followButton.backgroundTintList =
-                android.content.res.ColorStateList.valueOf(
-                    android.graphics.Color.parseColor("#1FCC79")
-                )
-        }
+        // Загрузка аватара автора
+        Glide.with(holder.itemView.context)
+            .load(currentUser.avatarUrl)
+            .circleCrop() // Сделает аватар круглым программно
+            .placeholder(R.drawable.avatar10) // Пока качается — покажем это
+            .into(holder.avatarImageView)
 
-        // Обработка клика по кнопке Follow
-        holder.followButton.setOnClickListener {
-            // Здесь можно обновить состояние в данных
-             currentUser.isFollowing = !currentUser.isFollowing
-             notifyItemChanged(position)
-
-            println("Follow clicked for: ${currentUser.name}")
-        }
-
-        // Обработка клика по всей ячейке
-        holder.itemView.setOnClickListener {
-            println("Clicked: ${currentUser.name}")
-        }
+        // Загрузка основной картинки блюда
+        Glide.with(holder.itemView.context)
+            .load(currentUser.foodImageUrl)
+            .centerCrop()
+            .into(holder.foodImageView)
     }
+
 
     override fun getItemCount(): Int = userList.size
 }
