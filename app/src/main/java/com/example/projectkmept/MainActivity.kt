@@ -74,13 +74,33 @@ class MainActivity : AppCompatActivity() {
         setTabDrawable(tab3, R.drawable.notification)
         setTabDrawable(tab4, R.drawable.profile)
 
+        tab1.setTextColor(android.graphics.Color.parseColor("#999999"))
+        tab2.setTextColor(android.graphics.Color.parseColor("#999999"))
+        tab3.setTextColor(android.graphics.Color.parseColor("#999999"))
+        tab4.setTextColor(android.graphics.Color.parseColor("#999999"))
+
+
 
         when (selectedTab.id) {
-            R.id.tab1 -> setTabDrawable(tab1, R.drawable.home_green)
-            R.id.tab2 -> setTabDrawable(tab2, R.drawable.edit_green)
-            R.id.tab3 -> setTabDrawable(tab3, R.drawable.notification_green)
-            R.id.tab4 -> setTabDrawable(tab4, R.drawable.profile_green)
+            R.id.tab1 -> {
+                setTabDrawable(tab1, R.drawable.home_green)
+                tab1.setTextColor(android.graphics.Color.parseColor("#4CAF50"))
+            }
+            R.id.tab2 -> {
+                setTabDrawable(tab2, R.drawable.edit_green)
+                tab2.setTextColor(android.graphics.Color.parseColor("#4CAF50"))
+            }
+            R.id.tab3 -> {
+                setTabDrawable(tab3, R.drawable.notification_green)
+                tab3.setTextColor(android.graphics.Color.parseColor("#4CAF50"))
+            }
+            R.id.tab4 -> {
+                setTabDrawable(tab4, R.drawable.profile_green)
+                tab4.setTextColor(android.graphics.Color.parseColor("#4CAF50"))
+            }
         }
+
+
     }
 
     private fun setTabDrawable(textView: TextView, drawableRes: Int) {
@@ -125,11 +145,19 @@ class MainActivity : AppCompatActivity() {
                     "https://cafebrynza.ru/images/articles/5-poleznykh-svojstv-goryachej-edy_66a272bd082bc2.png")
             )
 
-            recyclerView.adapter = UsersAdapter(foodList)
+            // Создаём адаптер с lambda функцией для обработки клика
+            val adapter = UsersAdapter(foodList) { user ->
+                // При клике открываем детальный экран рецепта
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, RecipeDetailFragment.newInstance(user))
+                    .addToBackStack(null)
+                    .commit()
+            }
+
+            recyclerView.adapter = adapter
             recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         }
     }
-
 
     class Screen2Fragment : Fragment() {
         override fun onCreateView(

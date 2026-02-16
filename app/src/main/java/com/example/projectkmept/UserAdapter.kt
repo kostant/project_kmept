@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.projectkmept.R
 import com.example.projectkmept.UserViewHolder
-class UsersAdapter(private val userList: List<User>) :
-    RecyclerView.Adapter<UserViewHolder>() {
+class UsersAdapter(
+    private val userList: List<User>,
+    private val onItemClick: (User) -> Unit
+) : RecyclerView.Adapter<UserViewHolder>() {
 
     data class User(
         val authorName: String,
@@ -31,7 +33,6 @@ class UsersAdapter(private val userList: List<User>) :
         holder.foodTitle.text = currentUser.foodTitle
         holder.foodDetails.text = "${currentUser.category}  •  ${currentUser.cookingTime}"
 
-
         Glide.with(holder.itemView.context)
             .load(currentUser.avatarUrl)
             .circleCrop()
@@ -41,6 +42,11 @@ class UsersAdapter(private val userList: List<User>) :
             .load(currentUser.foodImageUrl)
             .centerCrop()
             .into(holder.foodImageView)
+
+        // Клик по карточке
+        holder.itemView.setOnClickListener {
+            onItemClick(currentUser)
+        }
     }
 
     override fun getItemCount(): Int = userList.size
