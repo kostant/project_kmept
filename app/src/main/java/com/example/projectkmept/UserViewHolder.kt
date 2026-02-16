@@ -1,11 +1,9 @@
-package com.example.projectkmept.romaniuc.Romaniuc
+package com.example.projectkmept
 
-import androidx.recyclerview.widget.RecyclerView
 import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.projectkmept.R
+import androidx.recyclerview.widget.RecyclerView
 
 class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val avatarImageView: ImageView = itemView.findViewById(R.id.avatarImageView)
