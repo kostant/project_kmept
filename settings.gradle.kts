@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Project Kmept"
+rootProject.name = "AuthFlowApp"
 include(":app")
- 
