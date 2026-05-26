@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ingredientName" type="id" />
+    <item name="stepNumber" type="id" />
+    <item name="stepInstruction" type="id" />
+    <item name="stepImage" type="id" />
+</resources>
