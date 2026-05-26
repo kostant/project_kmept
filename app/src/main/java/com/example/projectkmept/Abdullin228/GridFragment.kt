@@ -116,10 +116,10 @@ class GridFragment : Fragment() {
     private fun createUsers(): List<UserCard> {
         val av1 = "https://sun9-76.userapi.com/s/v1/ig2/4Mn2ny1YAIm9QQxPEfj6vGWY7Ahy8yRNMm_nzuDdy5SvH6r2H1LDJrOFHoeHr_1ZBVrJyjNxMYvMgA8o6zMZUO8K.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960&from=bu&cs=1280x0"
         val av2 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFKd6QUoH9FP7pDPO0i2cynKIxdjy8uNmQwg&s"
-        val av3 = "https://litcult.ru/u/dd/prose/18062/md_foto.jpg"
+        val av3 = "https://images.news.ru/2026/03/11/XqWV0wnVWovTabmRRBLEZL05V1nskEPqr3YVmUrk_780.png"
         val av4 = "https://masterpiecer-images.s3.yandex.net/e541a1b9331211ee9492c65bced59789:upscaled"
 
-        val photo1 = "https://i.pinimg.com/736x/d0/fa/6b/d0fa6b211aea6ec5755adb2fb28ff6c6.jpg"
+        val photo1 = "https://images.news.ru/2026/03/11/XqWV0wnVWovTabmRRBLEZL05V1nskEPqr3YVmUrk_780.png"
         val photo2 = "https://i.pinimg.com/1200x/7d/e2/c3/7de2c3d4337af8fcb2dde497a4812b0d.jpg"
         val photo3 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPSO83Iu5knYmLhQ5874E2z6G93Qd75ZWDzg&s"
         val photo4 = "https://i.pinimg.com/originals/43/96/fa/4396fa964ad101d1936ddaeb805c2464.jpg"
