@@ -54,16 +54,6 @@ class UsersAdapter(private val allUsers: MutableList<UserCard>) : RecyclerView.A
             user.likes += if (user.isFollowed) 1 else -1
             notifyItemChanged(position)
         }
-
-        holder.itemView.setOnClickListener {
-            val activity = it.context as? androidx.fragment.app.FragmentActivity
-            val detailFragment = RecipeDetailFragment.newInstance(user)
-            activity?.supportFragmentManager?.beginTransaction()
-                ?.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
-                ?.replace(R.id.fragment_container, detailFragment)
-                ?.addToBackStack(null)
-                ?.commit()
-        }
     }
 
     override fun getItemCount(): Int = filteredUsers.size
