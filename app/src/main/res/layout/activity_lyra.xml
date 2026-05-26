@@ -5,7 +5,7 @@
     android:layout_marginTop="5dp"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -43,42 +43,53 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp">
-
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"/>
-
-        <EditText
-            android:layout_marginLeft="14dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/Icon"/>
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Enter ingredient"/>
+            android:layout_marginLeft="14dp"
+            app:cardCornerRadius="30dp">
+            <EditText
+                android:layout_marginLeft="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Enter ingredient"/>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp">
-
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"/>
-
-        <EditText
-            android:layout_marginLeft="14dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/Icon"/>
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Enter ingredient"/>
+            android:layout_marginLeft="14dp"
+            app:cardCornerRadius="30dp">
+            <EditText
+                android:layout_marginLeft="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Enter ingredient"/>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"/>
-
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="+ Ingredient"
+        android:textSize="20dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,18 +102,42 @@
         android:layout_width="match_parent"
         android:layout_height="125dp"
         android:layout_marginTop="20dp">
-
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"/>
-
-        <EditText
-            android:layout_marginLeft="14dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/Icon"/>
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Tell a little about your food"
-            android:textSize="15dp"/>
+            android:layout_marginLeft="14dp"
+            app:cardCornerRadius="10dp">
+            <EditText
+                android:layout_marginLeft="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tell a little about your food"
+                android:textSize="15dp"/>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:text="Next"/>
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:text="Back"/>
+    </FrameLayout>
 </FrameLayout>
+
+
 
