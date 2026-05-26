@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+
+
     <color name="white">#FFFFFFFF</color>
+
+    <color name="gray">#808080</color>
+
+    <color name="green">#1FCC79</color>
+
+    <color name="tabActive">#1FCC79</color>
+
+    <color name="tabInactive">#9FA5C0</color>
+
+    <color name="likeBackground">#E8F8F1</color>
+
+    <color name="checkCircleActive">#E3FFF8</color>
+
+    <color name="textPrimary">#2E3E5C</color>
+
+    <color name="textSecondary">#9FA5C0</color>
 </resources>

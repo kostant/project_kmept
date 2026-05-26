@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ingredientRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/checkCircle"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/bg_circle_unchecked">
+
+        <ImageView
+            android:id="@+id/checkIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_check"
+            android:contentDescription="checked" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/ingredientName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="14dp"
+        android:textSize="14sp"
+        android:textColor="#2E3E5C" />
+
+</LinearLayout>

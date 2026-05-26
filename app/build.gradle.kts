@@ -35,6 +35,7 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -42,7 +43,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation ("com.github.bumptech.glide:glide:5.0.5")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation ("androidx.recyclerview:recyclerview:1.3.1")
+    implementation ("com.google.android.material:material:1.10.0")
+    implementation ("io.coil-kt:coil:2.4.0")
 }
