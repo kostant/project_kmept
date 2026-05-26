@@ -19,34 +19,8 @@ import com.example.projectkmept.screens.LyraActivity
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.upload_step1)
 
-        findViewById<Button>(R.id.antonchikButton).setOnClickListener {
-            val intent = Intent(this, AntonchikActivity::class.java)
-            startActivity(intent)
-        }
-        findViewById<Button>(R.id.oorzhakButton).setOnClickListener {
-            val intent = Intent(this, ArsenchikActivity::class.java)
-            startActivity(intent)
-        }
-        
-        findViewById<Button>(R.id.AbdullinButton).setOnClickListener {
-            val intent = Intent(this, AbdullinActivity::class.java)
-            startActivity(intent)
-        }
-        
-        findViewById<Button>(R.id.RomaniucButton).setOnClickListener {
-            val intent = Intent(this, RomaniucActivity::class.java)
-            startActivity(intent)
-        }
-        
-        findViewById<Button>(R.id.lyraButton).setOnClickListener {
-            val intent = Intent(this, LyraActivity::class.java)
-            startActivity(intent)
-        }
-        findViewById<Button>(R.id.KovalevButton).setOnClickListener {
-             val intent = Intent(this, KovalevActivitry::class.java)
-             startActivity(intent)
-        }
+
     }
 }
