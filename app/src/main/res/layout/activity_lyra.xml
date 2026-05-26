@@ -1,108 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginHorizontal="14dp"
-    android:layout_marginTop="5dp"
-    android:orientation="vertical"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="80dp"
-            android:layout_height="33dp"
-            android:layout_gravity="left"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="1/2"
-            android:textSize="20dp"/>
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="Ingredients"
-            android:textSize="20dp" />
-        <Button
-            android:layout_width="80dp"
-            android:layout_height="33dp"
-            android:layout_gravity="right"/>
-    </FrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"/>
-
-        <EditText
-            android:layout_marginLeft="14dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Enter ingredient"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"/>
-
-        <EditText
-            android:layout_marginLeft="14dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Enter ingredient"/>
-    </LinearLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"/>
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="left"
-        android:text="Steps"
-        android:textSize="20dp"/>
+        android:layout_gravity="center"
+        android:text="Это экран Тимуршина В. В."/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:layout_marginTop="20dp">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"/>
-
-        <EditText
-            android:layout_marginLeft="14dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Tell a little about your food"
-            android:textSize="15dp"/>
-    </LinearLayout>
 </FrameLayout>
-
