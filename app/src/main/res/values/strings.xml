@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Project Kmept</string>
+    <string name="app_name">Project KMEPT</string>
+    <string name="fragments_title">Лабораторная: Retrofit</string>
+    <string name="loading_recipes">Загрузка рецептов через Retrofit...</string>
+    <string name="error_empty_response">Сервер вернул пустой ответ.</string>
+    <string name="error_loading_recipes">Ошибка загрузки: %1$s</string>
+    <string name="unknown_time">Время не указано</string>
+    <string name="unknown_difficulty">Сложность не указана</string>
+    <string name="recipe_default_category">Recipe</string>
+    <string name="recipe_rating_template">Rating: %.1f (%2$d reviews)</string>
+    <string name="retrofit_author">Retrofit API</string>
+    <string name="ingredients_title">Ingredients</string>
+    <string name="steps_title">Steps</string>
 </resources>

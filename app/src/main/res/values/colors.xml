@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="green_selected">#30BE71</color>
+    <color name="gray_unselected">#A0A5BA</color>
+    <color name="scan_bg">#EAF8EE</color>
+
+    <!-- Recipe screen colors (from sharik) -->
+    <color name="green">#1FCC79</color>
+    <color name="green_dark">#17A862</color>
+    <color name="likeBackground">#E8F8F1</color>
+    <color name="checkCircleActive">#E3FFF8</color>
+    <color name="textPrimary">#2E3E5C</color>
+    <color name="textSecondary">#9FA5C0</color>
+    <color name="divider">#F0F0F0</color>
+    <color name="white">#FFFFFF</color>
 </resources>
